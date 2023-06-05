@@ -83,7 +83,15 @@ async function cargarEstudiantes(){
       
       `;
 
-      const getOptionCharts1 = () => { 
+      const getOptionCharts1 = () => {
+
+        let value1 = ingles*1;
+        let value2 = Ser*1;
+        let value3 = Review*1;
+        let value4 = Skills*1;
+        let value5 = Asistencia*1;
+
+
         return {tooltip: {
           trigger: 'item'
         },
@@ -109,14 +117,14 @@ async function cargarEstudiantes(){
               }
             },
             data: [
-              { value: 1048, name: 'Search Engine' },
-              { value: 735, name: 'Direct' },
-              { value: 580, name: 'Email' },
-              { value: 484, name: 'Union Ads' },
-              { value: 300, name: 'Video Ads' },
+              { value: value1, name: 'Ingles' },
+              { value: value2, name: 'Ser' },
+              { value: value3, name: 'Review' },
+              { value: value4, name: 'Skills' },
+              { value: value5, name: 'Asistencia' },
               {
                 // make an record to fill the bottom 50%
-                value: 1048 + 735 + 580 + 484 + 300,
+                value: value1 + value2 + value3 + value4 + value5,
                 itemStyle: {
                   // stop the chart from rendering this piece
                   color: 'none',
